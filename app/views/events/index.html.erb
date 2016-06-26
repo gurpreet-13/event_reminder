@@ -1,0 +1,32 @@
+<!--Hover Rows-->
+<%=javascript_tag do%>
+$(function() {
+$.fn.bootstrapSwitch.defaults.size = 'mini';
+$("[type='checkbox']").bootstrapSwitch();
+});
+<%end%>
+<div class='' style="margin: 38px;background-image: url('<%=asset_path('header.png')%>')">
+
+<div class="col-md-12">
+    <div class="panel panel-dark margin-bottom-40">
+        <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-gear"></i>Reminders</h3>
+        </div>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Date</th>
+                    <th>State</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+              <%=render partial: 'event', collection: @events%>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>

@@ -1,0 +1,8 @@
+<tr>
+    <td><%=event.id%></td>
+    <td><%=event.title%></td>
+    <td><%=event.date%></td>
+    <td><input type="checkbox" name="my-checkbox-<%=event.id%>" checked></td>
+    <td><%= link_to '<i class="icon-edit"></i>Edit'.html_safe, edit_event_path(event)%></td>
+    <td><%= link_to '<i class="icon-trash icon-large"></i> Delete'.html_safe, event_path(event), method: :delete%></td>
+</tr>
